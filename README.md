@@ -1,64 +1,60 @@
-# Desafio Final: Estágio em Desenvolvimento na AEVO
+# ⚡ Pokedex Explorer
 
-Olá candidato(a),![alt text](https://static.wikia.nocookie.net/pokemongo/images/c/cd/Sticker_Funwari_Charmander.png/revision/latest?cb=20200817175607)
+![Badge Status](https://img.shields.io/badge/Status-Concluído-success)
+![Badge Framework](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white) 
+![Badge Linguagem](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 
-Primeiramente, parabéns por ter chegado até aqui! Essa tem sido uma Jornada Seletiva de altíssimo nível, mas o seu cadastro se destacou e não temos dúvidas de que você pode ser a pessoa certa para compor o nosso time.<br><br>
-Abaixo, você encontrará todos as informações necessárias para realizar a sua Etapa de Task.<br>
+## 📖 Sobre o Projeto
 
-## Visão Geral - O que é esperado?
-Essa etapa servirá para que você possa mostrar todos os seus conhecimentos em desenvolvimento WEB! <br>
-É esperado que você desenvolva uma página WEB para a exibição de uma lista de Pokémons e que seja possível selecionar um (1) para ver mais detalhes, utilizando uma API aberta para a consulta das informações. <br><br>
-Pode ficar à vontade para usar as técnicas, ferramentas e frameworks que você conheça e esteja familiarizado(a) para a confecção da página.<br>
+O **Pokedex Explorer** é uma Single Page Application (SPA) desenvolvida para explorar o universo Pokémon através do consumo da [PokéAPI](https://pokeapi.co/). O projeto foca em oferecer uma interface interativa onde os usuários podem listar, buscar e analisar dados detalhados de diversas criaturas.
 
-Caso precise consultar algum material de apoio, recomendamos:<br>
-Para o front: https://www.youtube.com/@loianegroner <br>
+Este projeto foi construído para demonstrar habilidades sólidas no desenvolvimento front-end, incluindo manipulação complexa de arrays, gerenciamento de estado reativo, requisições HTTP assíncronas e cálculos dinâmicos baseados no retorno da API.
 
-## Requisitos
-- Explorar a Documentação da API (https://pokeapi.co/docs/v2), para detalhes de utilização; 
+## ✨ Funcionalidades
 
-- Elaborar uma página para consultar e exibir as informações(lista de pokemons) da requisição da API na página;
+- **Listagem Dinâmica:** Exibição inicial de um catálogo com 151 Pokémons.
+- **Busca Integrada:** Campo de input para filtrar e encontrar Pokémons específicos rapidamente.
+- **Visualização de Detalhes:** Ao selecionar um Pokémon, o sistema realiza uma nova requisição para carregar dados aprofundados (tipos, habilidades e sprites).
+- **Cálculo de Poder (Base Stats):** Algoritmo que intercepta os atributos (`base_stats` contidos na propriedade `stats`) e realiza a soma total do poder do Pokémon selecionado, exibindo o resultado em tela.
+- **Sistema de Batalha/Comparação (Recurso Extra):** Funcionalidade que permite selecionar dois Pokémons simultaneamente para comparar qual deles possui a maior soma total de *Base Stats*.
 
-- Adicionar um input na página para permitir buscas;
+## 🛠️ Tecnologias e Ferramentas
 
-- Selecionar um dos pokemons listados para ver informações detalhadas(Informações detalhadas vem de outra requisicão na API);
+- **Angular:** Estruturação da aplicação e componentização.
+- **TypeScript:** Tipagem estrita de dados e interfaces para os retornos da API.
+- **RxJS:** Tratamento do fluxo de dados assíncronos e encadeamento de requisições.
+- **HTML5 & CSS3/SCSS:** Construção de layout criativo com foco em usabilidade.
 
-- Realizar a soma de todos status(Atributo base_stats que fica dentro de stats)  do pokemon selecionado e exibir esse valor;<br>
+## 🏗️ Destaques Técnicos
 
-Exemplo: uma chamada da API para trazer 151 pokemons 
-https://pokeapi.co/api/v2/pokemon/?limit=151
+Durante o desenvolvimento, as seguintes práticas foram priorizadas:
 
-Exemplo: uma chamada da API para trazer mais informações do pokemon 4 - Charmander
-https://pokeapi.co/api/v2/pokemon/4/
+- **Separação de Responsabilidades:** Criação de serviços dedicados apenas para a comunicação com a PokéAPI.
+- **Manipulação de Arrays:** Uso intensivo de métodos nativos do JavaScript/TypeScript para filtrar, mapear e reduzir (`reduce`) os dados recebidos, especialmente no cálculo dos status.
+- **Clean Code:** Estrutura de pastas organizada e código legível, facilitando a manutenção e escalabilidade.
 
+## 🚀 Como Executar o Projeto Localmente
 
-*Bonus/Extra*
-- Selecionar dois pokemons e exibir qual dos dois tem a soma de status(Atributo base_stats que fica dentro de stats)  maior;<br>
+### Pré-requisitos
+- [Node.js](https://nodejs.org/en/)
+- [Angular CLI](https://angular.io/cli) instalado globalmente.
 
-## O que será avaliado?
-- Como executa operações que envolvem array/lista;
-- Forma que as requisições são feitas;
-- Estrutura do projeto;
-- Noções basicas de Desenvolvimento Web(Html, css...); 
+### Rodando a aplicação
 
-### Observações importantes:
-Nenhum framework é exigido para a confecção da página!<br>
+```bash
+# Clone este repositório
+git clone https://github.com/SeuUsuario/pokedex-explorer.git
 
-- Será considerado um diferencial a estruturação de um projeto Angular para a confecção da página.<br>
-- Será considerado um diferencial um layout criativo e com uma boa usabilidade.<br>
-- Será considerado um diferencial a utilização de back-end para persistencia de dados em qualquer modelo de persistência.<br>
-- Será considerado ponto positivo a utilização de documentação para o mini projeto.<br>
+# Acesse a pasta do projeto
+cd pokedex-explorer
 
-### Como serei avaliado?
-Você poderá:
-- Efetuar um pull request da sua implementação diretamente no Github até a data limite de 24/04/2024 às 23h59; <br>
-ou  
-- Encaminhar para o e-mail carlos.pedroni@aevo.com.br com rh@aevo.com.br em cópia, um arquivo .zip ou link com o código fonte até a data limite de 24/04/2024 às 23h59. <br>
+# Instale as dependências
+npm install
 
-Quaisquer dúvidas técnicas em relação à Task, dificuldades com o repositório ou com a API PokeAPI, não deixe de entrar em contato com o e-mail: carlos.pedroni@aevo.com.br!
-
-O nosso Time de Pessoas e Cultura se encontra também à disposição para quaisquer outras questões que achar relevante. Basta nos contatar no e-mail: rh@aevo.com.br!
-
-Estes canais de comunicação estarão sempre abertos para você, não hesite em nos contatar caso tenha dúvidas.
-
-Boa sorte! 🧡 ![alt text](https://static.wikia.nocookie.net/pokemongo/images/a/af/Sticker_Funwari_Bulbasaur_bye.png/revision/latest?cb=20200825201636)
-
+# Inicie a aplicação
+ng serve
+Acesse http://localhost:4200 no seu navegador para ver a aplicação rodando.
+```
+## 🤝 Desenvolvedor Criado por Esdras Lima
+[LinkedIn](https://www.linkedin.com/in/esdrasdev/)
+[GitHub](https://github.com/esdraslimaff)
